@@ -1,0 +1,26 @@
+{
+  "name": "lib",
+  "homepage": "https://github.com/ewilliamswtn/capstone",
+  "authors": [
+    "Elliott <ewilliamswtn@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angularfire": "^2.0.2",
+    "bootstrap": "^3.3.7",
+    "firebase": "^3.3.2",
+    "jquery": "^3.1.0",
+    "materialize": "^0.97.7"
+  }
+}
