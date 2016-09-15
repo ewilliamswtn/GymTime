@@ -4,13 +4,40 @@
   <title></title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body ng-app="GymApp">
+
+<div ng-view>
+  <div ng-controller="topCtrl">
+  <!-- output -->
+  </div>
+</div>
 
 
 
 
 
 
+<!-- 3rd Party Resources -->
+<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+<script src="lib/bower_components/firebase/firebase.js"></script>
+
+<!-- App Specific Resources -->
 <script type="text/javascript" src="app/app.js"></script>
+
+<!-- Providers -->
+<script type="text/javascript" src="app/values/fb-creds.js"></script>
+<script type="text/javascript" src="app/factories/authFactory.js"></script>
+<script type="text/javascript" src="app/factories/userFactory.js"></script>
+<script type="text/javascript" src="app/factories/routineFactory.js"></script>
+<script type="text/javascript" src="app/factories/exerciseFactory.js"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="app/controllers/topCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/loginCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/routinesCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/routineCreateCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/routineEditCtrl.js"></script>
 </body>
 </html>
