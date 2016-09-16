@@ -32,12 +32,15 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/routineCreate.html',
       controller: 'routineCreateCtrl',
 
-    }).    //   when('/items/view/:itemId', {
-    //     templateUrl: 'partials/item-details.html',
-    //     controller: 'ItemViewCtrl'
+    }).
 
-    //   }).
-      otherwise('/');
+    when('/routines/edit', {
+      templateUrl: 'partials/routineEdit.html',
+      controller: 'routineEditCtrl',
+
+    }).
+
+    otherwise('/');
 });
 
 app.run( ($location, FBCreds) => {

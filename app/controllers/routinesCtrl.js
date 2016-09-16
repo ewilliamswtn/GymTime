@@ -12,7 +12,8 @@ app.controller("routinesCtrl", function ($scope, $window, authFactory, routineFa
 
 
   $scope.editRoutine = function (routineid) {
-
+    $scope.$parent.selectedRoutine = routineid;
+    $window.location.href = "#/routines/edit";
   }
 
   $scope.deleteRoutine = function (routineid) {

@@ -1,0 +1,61 @@
+<label class="" id="">
+  <span class="input-label">Routine Title</span>
+  <input type="text" id="" ng-model="routine.title">
+</label>
+
+<p>Exercises</p>
+
+<div ng-repeat="exercise in exerciseObjArray">
+  <label class="" id="">
+    <span class="input-label"></span>
+    <input type="text" id="" ng-model="exercise.name">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Sets</span>
+    <input type="text" id="" ng-model="exercise.sets">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Reps</span>
+    <input type="text" id="" ng-model="exercise.reps">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Weight</span>
+    <input type="text" id="" ng-model="exercise.weight">
+  </label><br>
+
+  <button ng-click="deleteExercise(exercise.id)">Delete</button><br>
+
+</div><br>
+
+<div ng-repeat="exercise in exercisesToAdd">
+  <label class="" id="">
+    <span class="input-label"></span>
+    <input type="text" id="" ng-model="exercise.name">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Sets</span>
+    <input type="text" id="" ng-model="exercise.sets">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Reps</span>
+    <input type="text" id="" ng-model="exercise.reps">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Weight</span>
+    <input type="text" id="" ng-model="exercise.weight">
+  </label><br>
+
+  <button ng-click="deleteExercise()">Delete</button><br>
+
+</div><br>
+
+
+<button ng-click="addExercise()">Add New Exercise</button><br>
+<button ng-click="saveRoutine(routine.id)">Save Routine</button>
+<button ng-click="cancel()">Cancel</button>
