@@ -2,6 +2,7 @@
 
 app.factory("routineFactory", ($q, $http, FirebaseURL, userFactory) => {
 
+  //get all routines
   let getRoutines = () => {
     let routines = [];
     return $q((resolve, reject) => {
@@ -21,9 +22,20 @@ app.factory("routineFactory", ($q, $http, FirebaseURL, userFactory) => {
     });
   };
 
+  //get a specific routine
+  let getRoutine = (routineId) => {
+    return $q((resolve, reject) => {
+      $http.get(`${FirebaseURL}/routines/${routineId}.json`)
+      .success((ObjFromFirebase) => {
+        resolve(ObjFromFirebase);
+      });
+    });
+  };
+
+  //post a routine
   let addRoutine = (newRoutine) => {
     return $q( (resolve, reject) => {
-      $http.post(`${FirebaseURL}/routines.json`, JSON.stringify(newRoutine))
+      $http.post(`${FirebaseURL}/routines.json`, angular.toJson(newRoutine))
         .success( (ObjFromFirebase) => {
           resolve(ObjFromFirebase);
         })
@@ -33,9 +45,10 @@ app.factory("routineFactory", ($q, $http, FirebaseURL, userFactory) => {
     });
   };
 
-let editRoutine = (routineObj, routineId) => {
+  //edit a routine
+  let editRoutine = (routineObj, routineId) => {
     return $q( (resolve, reject) => {
-      $http.patch(`${FirebaseURL}/routines/${routineId}.json`, JSON.stringify(routineObj))
+      $http.patch(`${FirebaseURL}/routines/${routineId}.json`, angular.toJson(routineObj))
         .success( (ObjFromFirebase) => {
           resolve(ObjFromFirebase);
         })
@@ -45,6 +58,7 @@ let editRoutine = (routineObj, routineId) => {
     });
   };
 
+  //delete a routine
   let deleteRoutine = (routineId) => {
     return $q((resolve, reject) => {
       $http.delete(`${FirebaseURL}/routines/${routineId}.json`)
@@ -55,5 +69,5 @@ let editRoutine = (routineObj, routineId) => {
   };
 
 
-return {getRoutines, addRoutine, editRoutine, deleteRoutine};
+return {getRoutines, getRoutine, addRoutine, editRoutine, deleteRoutine};
 });

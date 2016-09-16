@@ -1,6 +1,9 @@
 "use strict";
 
 app.controller("topCtrl", function  ($scope, $location, $window, authFactory, userFactory) {
+
+  let selectedRoutine;
+
   $scope.isLoggedIn = false;
 
   firebase.auth().onAuthStateChanged(function (user) {

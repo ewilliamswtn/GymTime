@@ -1,10 +1,8 @@
 <div ng-repeat="routine in routines">
   <p>{{routine.title}}</p>
-  <p>{{routine.exercises}}</p>
-  <p>{{routine.uid}}</p>
   <button ng-click="editRoutine(routine.id)">Edit</button>
   <button ng-click="deleteRoutine(routine.id)">Delete</button>
-</div>
+</div><br>
 
-<button ng-click="createNewRoutine()">Add</button>
+<button ng-click="createNewRoutine()">Add</button><br>
 <button ng-click="viewCompletedRoutines()">View Completed</button>

@@ -21,6 +21,16 @@ app.factory("exerciseFactory", ($q, $http, FirebaseURL, userFactory) => {
     });
   };
 
+   //get a specific exercise
+  let getExercise = (exerciseId) => {
+    return $q((resolve, reject) => {
+      $http.get(`${FirebaseURL}/exercises/${exerciseId}.json`)
+      .success((ObjFromFirebase) => {
+        resolve(ObjFromFirebase);
+      });
+    });
+  };
+
   let addExercise = (newExercise) => {
     return $q( (resolve, reject) => {
       $http.post(`${FirebaseURL}/exercises.json`, angular.toJson(newExercise))
@@ -35,7 +45,7 @@ app.factory("exerciseFactory", ($q, $http, FirebaseURL, userFactory) => {
 
 let editExercise = (exerciseObj, exerciseId) => {
     return $q( (resolve, reject) => {
-      $http.patch(`${FirebaseURL}/exercises/${exerciseId}.json`, JSON.stringify(exerciseObj))
+      $http.patch(`${FirebaseURL}/exercises/${exerciseId}.json`, angular.toJson(exerciseObj))
         .success( (ObjFromFirebase) => {
           resolve(ObjFromFirebase);
         })
@@ -55,5 +65,5 @@ let editExercise = (exerciseObj, exerciseId) => {
   };
 
 
-return {getExercises, addExercise, editExercise, deleteExercise};
+return {getExercises, getExercise, addExercise, editExercise, deleteExercise};
 });

@@ -55,10 +55,8 @@ app.controller("routineCreateCtrl", function ($scope, userFactory, routineFactor
 
   //saves the routine to firebase, returns the user to the 'routines view'
   $scope.saveNewRoutine = function () {
-
     //save exercises
     $.each($scope.exercises, function ( key, value) {
-      console.log(key, value);
       //loop throught all exercises added, add them to firebase individually
       exerciseFactory.addExercise(value)
       .then (function (data) {
@@ -72,7 +70,6 @@ app.controller("routineCreateCtrl", function ($scope, userFactory, routineFactor
 
            //save routine
             routineFactory.addRoutine($scope.newRoutine)
-
             //navigate back to routines page
             .then(function () {
               $location.url("/routines");
