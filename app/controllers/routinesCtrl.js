@@ -10,6 +10,10 @@ app.controller("routinesCtrl", function ($scope, $window, authFactory, routineFa
     $scope.routines = routinesArray;
   });
 
+  $scope.deployRoutine = function (routineid) {
+    $scope.$parent.selectedRoutine = routineid;
+    $window.location.href = "#/routines/deploy";
+  }
 
   $scope.editRoutine = function (routineid) {
     $scope.$parent.selectedRoutine = routineid;

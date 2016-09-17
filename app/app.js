@@ -39,6 +39,11 @@ app.config(function($routeProvider) {
       controller: 'routineEditCtrl',
 
     }).
+    when('/routines/deploy', {
+      templateUrl: 'partials/routineDeploy.html',
+      controller: 'routineDeployCtrl',
+
+    }).
 
     otherwise('/');
 });

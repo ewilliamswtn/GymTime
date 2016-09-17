@@ -1,5 +1,6 @@
 <div ng-repeat="routine in routines">
   <p>{{routine.title}}</p>
+  <button ng-click="deployRoutine(routine.id)">Deploy</button>
   <button ng-click="editRoutine(routine.id)">Edit</button>
   <button ng-click="deleteRoutine(routine.id)">Delete</button>
 </div><br>
