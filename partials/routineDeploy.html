@@ -1,0 +1,18 @@
+<h3>{{routine.title}}</h3>
+
+<div ng-repeat="exercise in exerciseObjArray">
+
+  <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span> <input id="{{exercise.id}}" type ="checkbox" class="doneCB" ng-show="!edit">
+
+
+  <div ng-show="edit">
+    <input type="text" id="" ng-model="exercise.name">: <input type="text" id="" ng-model="exercise.sets"> x <input type="text" id="" ng-model="exercise.reps"> @ <input type="text" id="" ng-model="exercise.weight"> lbs
+  </div>
+
+  <button ng-show="edit" ng-click="edit = !edit">Done</button>
+<br>
+
+</div>
+
+<button ng-click="allDone()">Mark all done</button>
+<button ng-click="finish()">Finish</button>

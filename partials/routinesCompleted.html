@@ -1,0 +1,47 @@
+<!-- Ideal setup: -->
+<!-- Radio: Select sort by Date or Exercise -->
+
+<!-- Date selected: -->
+<!-- Dropdown appears, shows all available dates -->
+<!-- Selecting a Date displays exercises done on that date, in order -->
+
+<!-- Exercise selected -->
+<!-- Dropdown appears, shows all exercise names -->
+<!-- Selecting an Exercise Name displays a graph showing weight vs time, mouse over shows sets & reps -->
+
+
+<!-- implement multi views later? -->
+<!-- <span ng-click="dateView = true">Sort by Date</span> | <span ng-click="dateView = false">Sort by Exercise</span> -->
+
+<!-- <div ng-show="dateView">
+  <select name="" id="" ng-model="select0r">
+	  <option ng-repeat="item in datesArray"  value="{{item}}" >{{item}}</option>
+  </select>
+</div>
+
+<div>
+	<ul ng-repeat="exercise in exercises">
+		<li>{{exercise.name}}</li>
+		<li>{{exercise.userDateStr}}</li>
+	</ul>
+</div>
+ -->
+
+
+
+
+
+<p>Choose Exercise</p>
+
+  <select name="" id="" ng-model="exSelect" ng-change="displayEx()">
+	  <option ng-repeat="exercise in uniqueExercisesArray"  value="{{exercise}}">{{exercise}}</option>
+  </select>
+
+ <div ng-repeat="exercise in selectedExArray">
+ 	<span>{{exercise.userDateStr}}: </span>
+ 	<span>{{exercise.weight}} lbs</span>
+ </div>
+
+
+ <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+</canvas>

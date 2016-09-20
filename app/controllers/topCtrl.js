@@ -1,9 +1,16 @@
 "use strict";
 
 app.controller("topCtrl", function  ($scope, $location, $window, authFactory, userFactory) {
+//topCtrl is the topmost app controller
+//all other controllers are siblings of each other; all children of topCtrl
+//because of this structuring, topCtrl is used to handoff information between its child controllers
 
+
+
+  //a variable to holder a selected routine id -> pass between sibling ctrls
   let selectedRoutine;
 
+  //on change of authorization state, determine if a user is logged in.  if so: carry on.  if not: do not pass go, etc etc
   $scope.isLoggedIn = false;
 
   firebase.auth().onAuthStateChanged(function (user) {
@@ -18,6 +25,7 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
     $scope.$apply();
   });
 
+  //manually log out user
   $scope.logout = function() {
     authFactory.logoutUser()
     .then(function(data) {
