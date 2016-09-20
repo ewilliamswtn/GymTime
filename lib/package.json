@@ -17,5 +17,9 @@
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "matchdep": "^1.0.1"
+  },
+  "dependencies": {
+    "angular-chart.js": "^1.0.2",
+    "chart.js": "^2.2.2"
   }
 }

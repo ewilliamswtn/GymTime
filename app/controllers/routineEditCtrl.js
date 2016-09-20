@@ -30,6 +30,11 @@ $scope.exercisesToAdd = [];
 
         //store the exercise objects in yet another array
         $scope.exerciseObjArray.push(data);
+
+        //sort array based on index number
+        $scope.exerciseObjArray.sort(function (a, b) {
+          return a.index - b.index;
+        });
       }); //end .then following getExercise(s) call
     }); //end looper over exerciseArray
   }); //end .then following getRoutine call
@@ -126,6 +131,7 @@ $scope.exercisesToAdd = [];
     }
   };
 
+  //if a user decides the changes are unwanted, (s)he can simply navigate back to the routines list with no changes being saved
   $scope.cancel = function () {
     $window.location.href = "#/routines";
   };

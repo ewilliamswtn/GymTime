@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module("GymApp", ["ngRoute"])
+var app = angular.module("GymApp", ["ngRoute", "chart.js"])
 .constant("FirebaseURL", "https://gymapp-a7071.firebaseio.com/");
 
 let isAuth = (AuthFactory) => new Promise( (resolve, reject) => {
@@ -42,6 +42,11 @@ app.config(function($routeProvider) {
     when('/routines/deploy', {
       templateUrl: 'partials/routineDeploy.html',
       controller: 'routineDeployCtrl',
+
+    }).
+    when('/routines/completed', {
+      templateUrl: 'partials/routinesCompleted.html',
+      controller: 'routinesCompletedCtrl',
 
     }).
 

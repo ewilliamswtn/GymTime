@@ -13,7 +13,8 @@ app.controller("routineCreateCtrl", function ($scope, userFactory, routineFactor
     name: "",
     sets: "",
     reps: "",
-    weight: ""
+    weight: "",
+    index: null
   };
 
   //array to hold all exercises added to the routine
@@ -29,7 +30,7 @@ app.controller("routineCreateCtrl", function ($scope, userFactory, routineFactor
   $scope.exercisedSaved = true;
 
 
-  //see line 17
+  //see line 27
   $scope.addNewExercise = function () {
 
     //toggles 'add new exercise' button off, toggles 'new exercise inputs' on, toggles 'save exercise' button on
@@ -44,8 +45,10 @@ app.controller("routineCreateCtrl", function ($scope, userFactory, routineFactor
     };
   };
 
-  //see line 18
+  //see line 28
   $scope.saveNewExercise = function () {
+
+    $scope.newExercise.index = $scope.exercises.length;
     //adds 'newExercise' to the '$scope.exercises' array
     $scope.exercises.push($scope.newExercise);
 
