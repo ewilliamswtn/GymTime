@@ -1,4 +1,65 @@
-<label class="" id="">
+<h3 ng-click="editTitle = !editTitle" ng-show="!editTitle">{{routine.title}}</h3>
+<input type="text" id="" ng-model="routine.title" ng-show="editTitle">
+<button ng-show="editTitle" ng-click="editTitle = !editTitle">Done</button>
+
+
+<div ng-repeat="exercise in exerciseObjArray">
+
+  <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span>  <button ng-click="deleteExercise(exercise)">Delete</button>
+
+
+  <div ng-show="edit">
+    <input type="text" id="" ng-model="exercise.name">: <input type="text" id="" ng-model="exercise.sets"> x <input type="text" id="" ng-model="exercise.reps"> @ <input type="text" id="" ng-model="exercise.weight"> lbs
+  </div>
+
+  <button ng-show="edit" ng-click="edit = !edit">Done</button>
+<br>
+
+</div>
+
+
+
+<div ng-repeat="exercise in exercisesToAddDOM">
+
+  <label class="" id="">
+    <span class="input-label"></span>
+    <input type="text" id="" ng-model="exercise.name">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Sets</span>
+    <input type="text" id="" ng-model="exercise.sets">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Reps</span>
+    <input type="text" id="" ng-model="exercise.reps">
+  </label>
+
+  <label class="" id="">
+    <span class="input-label">Weight</span>
+    <input type="text" id="" ng-model="exercise.weight">
+  </label><br>
+
+  <button ng-click="confirmAdd()">Confirm</button>
+
+</div>
+
+<button ng-click="addExercise()">Add New Exercise</button><br>
+<button ng-click="saveRoutine(routine.id)">Save Routine</button>
+<button ng-click="cancel()">Cancel</button>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <label class="" id="">
   <span class="input-label">Routine Title</span>
   <input type="text" id="" ng-model="routine.title">
 </label>
@@ -58,4 +119,4 @@
 
 <button ng-click="addExercise()">Add New Exercise</button><br>
 <button ng-click="saveRoutine(routine.id)">Save Routine</button>
-<button ng-click="cancel()">Cancel</button>
+<button ng-click="cancel()">Cancel</button> -->

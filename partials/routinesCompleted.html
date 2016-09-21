@@ -30,17 +30,18 @@
 
 
 
-
-<p>Choose Exercise</p>
+<div>
+	<p>Choose Exercise</p>
 
   <select name="" id="" ng-model="exSelect" ng-change="displayEx()">
 	  <option ng-repeat="exercise in uniqueExercisesArray"  value="{{exercise}}">{{exercise}}</option>
   </select>
+</div><br><br>
 
- <div ng-repeat="exercise in selectedExArray">
+<!--  <div ng-repeat="exercise in selectedExArray">
  	<span>{{exercise.userDateStr}}: </span>
  	<span>{{exercise.weight}} lbs</span>
- </div>
+ </div> -->
 
 
  <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
