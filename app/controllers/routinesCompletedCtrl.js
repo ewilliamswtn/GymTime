@@ -50,7 +50,6 @@ app.controller("routinesCompletedCtrl", function ($scope, $window, authFactory, 
 
     // user has selected a saved exercise
     $scope.displayEx = function () {
-      console.log("fire");
       // empty arrarys
       $scope.selectedExArray = [];
       $scope.selectedExWeightArray = [];

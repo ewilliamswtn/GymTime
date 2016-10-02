@@ -1,6 +1,6 @@
 <h3>{{routine.title}}</h3>
 
-<div ng-repeat="exercise in exerciseObjArray">
+<!-- div ng-repeat="exercise in exerciseObjArray">
 
   <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span> <input id="{{exercise.id}}" type ="checkbox" class="doneCB" ng-show="!edit">
 
@@ -12,7 +12,31 @@
   <button ng-show="edit" ng-click="edit = !edit">Confirm</button>
 <br>
 
-</div>
+</div> -->
+
+<ul dnd-list="exerciseObjArray">
+    <!-- The dnd-draggable directive makes an element draggable and will
+         transfer the object that was assigned to it. If an element was
+         dragged away, you have to remove it from the original list
+         yourself using the dnd-moved attribute -->
+    <li ng-repeat="exercise in exerciseObjArray"
+        dnd-draggable="exercise"
+        dnd-moved="exerciseObjArray.splice($index, 1)"
+        dnd-effect-allowed="move"
+        dnd-selected="models.selected = exercise"
+        ng-class="{'selected': models.selected === exercise}">
+
+          <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span> <input id="{{exercise.id}}" type ="checkbox" class="doneCB" ng-show="!edit">
+
+		  <div ng-show="edit">
+		    <input type="text" id="" ng-model="exercise.name">: <input type="text" id="" ng-model="exercise.sets"> x <input type="text" id="" ng-model="exercise.reps"> @ <input type="text" id="" ng-model="exercise.weight"> lbs
+		  </div>
+
+		  <button ng-show="edit" ng-click="edit = !edit">Confirm</button>
+    </li>
+</ul>
+
+
 
 <button ng-click="allDone()">Mark all done</button>
 <button ng-click="finish()">Finish</button>

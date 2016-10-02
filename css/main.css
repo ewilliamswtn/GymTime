@@ -1,0 +1,343 @@
+
+/****** anti webkit stuff *******/
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus {
+	outline: none;
+}
+
+button:focus {
+	outline: 0 !important;
+
+}
+
+
+/******* body *******/
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: #e0e0e0;
+	padding-top: 40px;
+}
+
+
+/****** nav bar ******/
+
+.navbar {
+	background-color: #115075;
+}
+
+.nav {
+	padding-left: 30%;
+	font-size: 1.3em;
+}
+
+@media (max-width: 980px) {
+	.nav {
+		padding-left: 28%;
+	}
+}
+
+@media (max-width: 680px) {
+	.nav {
+		padding-left: 18%;
+	}
+}
+
+@media (max-width: 480px) {
+	.nav {
+		padding-left: 10%;
+	}
+}
+
+@media (max-width: 480px) {
+	.nav {
+		padding-left: none;
+	}
+}
+
+.nav a {
+	color: #f5f5f5;
+}
+
+/*active*/
+.nav li.active a {
+	background-color: #0E3951;
+}
+
+canvas {
+	max-width: 85%;
+}
+
+
+/*when mouse leaves, but was last on this button.  annoying*/
+.nav>li>a:focus {
+	background-color: #115075;
+}
+
+/*hover*/
+.nav>li>a:hover {
+	background-color: #0E3951;
+}
+
+
+/*hover over active*/
+.nav-pills>li.active>a:hover {
+	background-color: #00283C;
+}
+
+.nav-pills>li.active>a:focus {
+	background-color: #00283C;
+}
+
+/****** login page ******/
+
+.loginCard {
+	margin-top: 20px;
+	padding: 8px 40px 15px 40px;
+	background-color: #fafafa;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+}
+
+section {
+	text-align: center;
+}
+
+section h3 {
+	margin-bottom: 20px;
+}
+
+section div {
+	margin-bottom: 7px;
+}
+
+section input {
+	margin-bottom: 10px;
+}
+
+.loginEmailWrapper {
+	display: inline-block;
+	text-align: left;
+}
+
+.loginPWordWrapper {
+	display: inline-block;
+	text-align: left;
+	margin-left: -25px;
+
+}
+
+/****** routines page ******/
+
+.routineCardWrapper {
+	max-height: 93vh;
+	overflow: scroll;
+}
+
+.routineCard {
+	position: relative;
+	margin-top: 20px;
+	padding: 8px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	text-align: center;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+}
+
+.routineCard span {
+	font-size: 2em;
+}
+
+.deployRoutineButton {
+	height: 35px;
+	width: 40%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.deployRoutineButton i {
+	font-size: 30px;
+	margin-top: -4px;
+	margin-right: -4px;
+}
+
+.editRoutineButton {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	right: 40px;
+}
+
+.editRoutineButton i {
+	font-size: 22px;
+	margin-left: -8px;
+	margin-top: -3px;
+}
+
+.deleteRoutineButton {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	right: 5px;
+}
+
+.deleteRoutineButton i {
+	font-size: 25px;
+	margin-left: -10px;
+	margin-top: -5px;
+}
+
+.deleteRoutineButton:hover {
+	background-color: #f44336;
+	border-color: #a31306;
+}
+
+.addRoutineButton {
+	font-size: 70px;
+	color: #337ab7;
+	margin-top: 15px;
+
+}
+
+@media (max-width: 780px) {
+	.addRoutineButton {
+		font-size: 60px;
+		margin-left: -10px;
+	}
+}
+
+@media (max-width: 580px) {
+	.addRoutineButton {
+		font-size: 60px;
+		margin-left: -15px;
+	}
+}
+
+@media (max-width: 480px) {
+
+}
+
+.addRoutineButton:hover {
+	color: #00e676;
+	cursor: pointer;
+}
+
+/******* edit page *******/
+
+.editCard {
+	width: 600px;
+	height: 450px;
+	margin: 50px auto 0px auto;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	text-align: center;
+}
+
+.editCard h3:hover {
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #e0e0e0;
+}
+
+.editCard span:hover {
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.editRoutineTitleInput {
+	margin-top: 10px;
+	height: 40px;
+	font-size: 1.7em;
+	text-align: center;
+}
+
+.editInputWrapper ul {
+	list-style: none;
+}
+
+.editInputWrapper ul li {
+	height: 40px;
+	padding-top: 8px;
+	padding-right: 5px;
+	border-radius: 4px;
+}
+
+.editInputWrapper ul li:hover {
+	background-color: #e0e0e0;
+}
+
+.editInputWrapper li button i {
+	font-size: 25px;
+
+}
+
+.editRoutineTitleDoneBtn {
+	padding: 0;
+	margin-top: -10px;
+	margin-left: 5px;
+	width: 50px;
+	height: 30px;
+}
+
+.editInput {
+	width: 60px;
+}
+
+.routineDeleteButton {
+	padding: 0;
+	padding-top: 1px;
+	padding-left: 1px;
+	height: 30px;
+	width: 30px;
+	float: right;
+	margin-top: -3px;
+}
+
+.routineDeleteButton:hover {
+	background-color: #f44336;
+	border-color: #a31306;
+}
+
+.doneButton {
+	padding: 0;
+	float: right;
+	height: 30px;
+	width: 50px;
+	margin-top: -3px;
+}
+
+.saveRoutineButton {
+	width: 49.6%;
+}
+
+.cancelButton {
+	width: 49.6%;
+}
+
+.addExDoneBtn {
+	padding: 0;
+	float: right;
+	margin-top: -4px;
+	width: 50px;
+	height: 30px;
+}
+
+.edit-NewExDiv {
+	margin-bottom: 10px;
+}
+

@@ -2,16 +2,28 @@
 <html>
 <head>
   <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/material-design-icons/iconfont/material-icons.css">
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="GymApp">
 
-<div ng-view>
-  <div ng-controller="topCtrl">
-  <!-- output -->
-  </div>
-</div>
+	<div ng-controller="topCtrl">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<ul class="nav nav-pills">
+			  <li class="navLinkRoutine" class=""><a href="" ng-click="routinesNav()">Routines</a></li>
+			  <li class="navLinkNewRoutine"><a href="" ng-click="newRoutinesNav()">New Routine</a></li>
+			  <li class="navLinkLogs"><a href="" ng-click="logsNav()">Logs</a></li>
+			  <li class="navLinkLogout"><a href="" ng-click="logoutNav()">Logout</a></li>
+			</ul>
+		</div>
 
+		<div ng-view>
+		  <!-- output -->
+	  </div>
+
+	</div>
 
 
 
@@ -19,9 +31,11 @@
 
 <!-- 3rd Party Resources -->
 <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/chart.js/dist/Chart.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 

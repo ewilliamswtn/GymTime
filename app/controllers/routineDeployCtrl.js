@@ -36,14 +36,16 @@ app.controller("routineDeployCtrl", function ($scope, $window, authFactory, user
 
         //store the exercise objects in yet another array
         $scope.exerciseObjArray.push(data);
-
         //sort array based on index number
         $scope.exerciseObjArray.sort(function (a, b) {
           return a.index - b.index;
         });
+        console.log(value, index);
       }); //end .then following getExercise(s) call
     }); //end looper over exerciseArray
   }); //end .then following getRoutine call
+
+
 
   //mark all exercise checkboxes as done  ***** WE DONT EVER NEED TO UNMARK ALL BC #GETSWOLE ******
   $scope.allDone = function  () {

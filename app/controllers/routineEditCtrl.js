@@ -46,6 +46,8 @@ app.controller("routineEditCtrl", function ($scope, $window, authFactory, userFa
     }); //end looper over exerciseArray
   }); //end .then following getRoutine call
 
+
+
   //this should only remove the exercise from the scope, NOT
   //immediately delete it from firebase
   //after removing from scope, this should add the exerciseid to an array
