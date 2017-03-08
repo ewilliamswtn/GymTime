@@ -79,11 +79,11 @@ app.controller("routineDeployCtrl", function ($scope, $window, authFactory, user
 
       // ***** get the date *****
       // ** actual date **
-      // let d = new Date();
+      let d = new Date();
       // ** end actual date **
 
       // ** date faker for dummy data **
-      let d = new Date("2013-10-10T20:24:50.883Z");
+      // let d = new Date("2015-10-12T20:24:50.883Z");
       // ** end date faker **
       // ****** end date code block ******
 

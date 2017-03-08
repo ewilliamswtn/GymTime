@@ -15,34 +15,41 @@
 
 <!-- <div ng-show="dateView">
   <select name="" id="" ng-model="select0r">
-	  <option ng-repeat="item in datesArray"  value="{{item}}" >{{item}}</option>
+    <option ng-repeat="item in datesArray"  value="{{item}}" >{{item}}</option>
   </select>
 </div>
 
 <div>
-	<ul ng-repeat="exercise in exercises">
-		<li>{{exercise.name}}</li>
-		<li>{{exercise.userDateStr}}</li>
-	</ul>
+  <ul ng-repeat="exercise in exercises">
+    <li>{{exercise.name}}</li>
+    <li>{{exercise.userDateStr}}</li>
+  </ul>
 </div>
  -->
 
 
 
 
-<div>
-	<p>Choose Exercise</p>
+<div class="routinesCompletedWrapper row">
+  <div class="col-xs-1 leftChartLabel"></div>
+  <div class="col-xs-10">
+    <p>Choose Exercise</p>
 
-  <select name="" id="" ng-model="exSelect" ng-change="displayEx()">
-	  <option ng-repeat="exercise in uniqueExercisesArray"  value="{{exercise}}">{{exercise}}</option>
-  </select>
-</div><br><br>
+    <select name="" id="" ng-model="exSelect" ng-change="displayEx()">
+      <option ng-repeat="exercise in uniqueExercisesArray"  value="{{exercise}}">{{exercise}}</option>
+    </select>
+  <br><br>
 
-<!--  <div ng-repeat="exercise in selectedExArray">
- 	<span>{{exercise.userDateStr}}: </span>
- 	<span>{{exercise.weight}} lbs</span>
- </div> -->
+  <!--  <div ng-repeat="exercise in selectedExArray">
+    <span>{{exercise.userDateStr}}: </span>
+    <span>{{exercise.weight}} lbs</span>
+   </div> -->
 
 
- <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas>
+     <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas> <br><br><br>
+
+  </div>
+</div>
+
+

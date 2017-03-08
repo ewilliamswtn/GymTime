@@ -151,6 +151,7 @@ section input {
 	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
 	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
 	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+
 }
 
 .routineCard span {
@@ -229,7 +230,8 @@ section input {
 }
 
 .addRoutineButton:hover {
-	color: #00e676;
+	color: #449d44;
+	border-color: #398439;
 	cursor: pointer;
 }
 
@@ -340,4 +342,123 @@ section input {
 .edit-NewExDiv {
 	margin-bottom: 10px;
 }
+
+/****** create routine page ******/
+
+.newRoutineCard {
+	width: 600px;
+	min-height: 500px;
+	margin: 50px auto 20px auto;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	text-align: center;
+	position: relative
+}
+
+.newRoutineCard ul {
+	list-style: none;
+	padding: 0;
+}
+
+.newRoutineTitleLi {
+	font-size: 1.5em;
+	margin-bottom: 25px;
+}
+
+.newExerciseLi {
+	font-size: 1.25em;
+}
+
+.newExWeightLi {
+	margin-bottom: 10px;
+}
+
+.newRoutineSaveBtn {
+	position: absolute;
+  bottom: 15px;
+  right: 30px;
+  width: 90%;
+}
+
+.newRoutineSaveBtn:hover {
+	background-color: #449d44;
+	border-color: #398439;
+}
+
+.new-addExToRoutine {
+	margin-bottom: 60px;
+}
+
+/****** routine deploy page *******/
+
+.routineDeployCard {
+	width: 600px;
+	min-height: 200px;
+	margin: 50px auto 20px auto;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+	text-align: center;
+	position: relative
+}
+
+.routineDeployCard ul {
+	list-style: none;
+	padding: 0;
+}
+
+.routineDeployCard li {
+	height: 40px;
+	cursor: pointer;
+	padding: 10px 0px 0px 0px;
+}
+
+.routineDeployCard li:hover {
+	background-color: #e0e0e0;
+	border-radius: 4px;
+}
+
+
+.deployRoutineTitle {
+	font-size: 1.75em;
+}
+
+.doneCB {
+	float: right;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.deployInput {
+	width: 60px;
+}
+
+.deploy-editDoneBtn {
+	padding: 0;
+	float: right;
+	height: 30px;
+	width: 50px;
+	margin-top: -5px;
+	margin-right: 5px;
+}
+
+/****** deployed routines page *******/
+
+.routinesCompletedWrapper {
+	margin-top: 50px;
+}
+
+.leftChartLabel {
+	padding-top: 30vh;
+	padding-left: 40px;
+}
+
+
 
