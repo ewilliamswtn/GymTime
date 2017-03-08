@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module("GymApp", ["ngRoute", "chart.js"])
+var app = angular.module("GymApp", ["ngRoute", "dndLists", "chart.js"])
 .constant("FirebaseURL", "https://gymapp-a7071.firebaseio.com/");
 
 let isAuth = (AuthFactory) => new Promise( (resolve, reject) => {

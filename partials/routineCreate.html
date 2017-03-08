@@ -1,36 +1,35 @@
-
-  <form id="" class="list">
-      <list id="routineList">
-        <li id="">
+<div class="newRoutineCard">
+      <ul id="routineList">
+        <li id="" class="newRoutineTitleLi">
           <label class="" id="">
-              <span class="input-label">Routine Title</span>
+              <span class="input-label">Routine Title: </span>
               <input type="text" id="newRoutineTitleInput" placeholder="title" ng-model="newRoutine.title">
           </label>
         </li>
 
 
-        <li ng-repeat="exercise in exercises">
+        <li class="newExerciseLi" ng-repeat="exercise in exercises">
         <p>{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}}lbs</p>
         </li>
 
-        <li ng-hide="exercisedSaved">
+        <li class="newExerciseLi" ng-hide="exercisedSaved">
           <input type="" name="" placeholder="Exerise Name" ng-model="newExercise.name">
         </li>
 
-        <li ng-hide="exercisedSaved">
+        <li class="newExerciseLi" ng-hide="exercisedSaved">
           <input type="" name="" placeholder="sets" ng-model="newExercise.sets">
         </li>
 
-        <li ng-hide="exercisedSaved">
+        <li class="newExerciseLi" ng-hide="exercisedSaved">
           <input type="" name="" placeholder="reps" ng-model="newExercise.reps">
         </li>
 
-        <li ng-hide="exercisedSaved">
+        <li class="newExerciseLi newExWeightLi" ng-hide="exercisedSaved">
           <input type="" name="" placeholder="weight" ng-model="newExercise.weight">
         </li>
 
-        <button id="" class="" ng-click="saveNewExercise()" ng-hide="exercisedSaved">Add to Routine</button>
-      </list>
-      <button id="" class="" ng-click="addNewExercise()" ng-show="exercisedSaved">Add New Exercise</button>
-      <button id="" class="" ng-click="saveNewRoutine()">Save</button>
-  </form>
+        <button id="" class="btn btn-primary new-addExToRoutine" ng-click="saveNewExercise()" ng-hide="exercisedSaved">Add to Routine</button>
+      </ul>
+      <button id="" class="btn btn-primary new-addExToRoutine" ng-click="addNewExercise()" ng-show="exercisedSaved">Add New Exercise</button>
+      <button id="" class="btn btn-primary btn-block btn-lg newRoutineSaveBtn" ng-click="saveNewRoutine()">Save</button>
+</div>

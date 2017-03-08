@@ -1,4 +1,102 @@
-<label class="" id="">
+    <div class="editCard">
+
+      <div class="editTitleWrapper">
+        <h3 ng-click="editTitle = !editTitle" ng-show="!editTitle">{{routine.title}}</h3>
+        <input class="editRoutineTitleInput" type="text" id="" ng-model="routine.title" ng-show="editTitle">
+        <button class="btn btn-success editRoutineTitleDoneBtn" ng-show="editTitle" ng-click="editTitle = !editTitle">Done</button>
+      </div>
+      <!--
+      <div ng-repeat="exercise in exerciseObjArray">
+
+        <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span>  <button ng-click="deleteExercise(exercise)">Delete</button>
+
+
+        <div ng-show="edit">
+          <input type="text" id="" ng-model="exercise.name">: <input type="text" id="" ng-model="exercise.sets"> x <input type="text" id="" ng-model="exercise.reps"> @ <input type="text" id="" ng-model="exercise.weight"> lbs
+        </div>
+
+        <button ng-show="edit" ng-click="edit = !edit">Done</button>
+      <br>
+
+      </div> -->
+
+
+
+
+      <div class="editInputWrapper">
+        <ul dnd-list="exerciseObjArray">
+            <!-- The dnd-draggable directive makes an element draggable and will
+                 transfer the object that was assigned to it. If an element was
+                 dragged away, you have to remove it from the original list
+                 yourself using the dnd-moved attribute -->
+            <li ng-repeat="exercise in exerciseObjArray"
+                dnd-draggable="exercise"
+                dnd-moved="exerciseObjArray.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-selected="models.selected = exercise"
+                ng-class="{'selected': models.selected === exercise}">
+
+              <span ng-click="edit = !edit" ng-show="!edit">{{exercise.name}}: {{exercise.sets}} x {{exercise.reps}} @ {{exercise.weight}} lbs</span>  <button class="btn btn-primary routineDeleteButton" ng-show="!edit" ng-click="deleteExercise(exercise)"><i class="material-icons">clear</i></button>
+
+
+              <div ng-show="edit">
+                <input class="editTitleInput" type="text" id="" ng-model="exercise.name">: <input class="editInput" type="text" id="" ng-model="exercise.sets"> x <input class="editInput" type="text" id="" ng-model="exercise.reps"> @ <input class="editInput" type="text" id="" ng-model="exercise.weight"> lbs
+              <button class="btn btn-success doneButton" ng-show="edit" ng-click="edit = !edit">Done</button>
+
+
+              </div>
+
+            </li>
+        </ul>
+
+
+        <div class="edit-NewExDiv" ng-repeat="exercise in exercisesToAddDOM">
+
+          <label class="" id="">
+            <span class="input-label"></span>
+            <input type="text" id="" ng-model="exercise.name" placeholder="Exercise Name">
+          </label>
+
+          <label class="" id="">
+            <span class="input-label">: </span>
+            <input class="editInput" type="text" id="" ng-model="exercise.sets" placeholder="Sets">
+          </label>
+
+          <label class="" id="">
+            <span class="input-label"> x </span>
+            <input class="editInput" type="text" id="" ng-model="exercise.reps" placeholder="Reps">
+          </label>
+
+          <label class="" id="">
+            <span class="input-label"> @</span>
+            <input class="editInput" type="text" id="" ng-model="exercise.weight" placeholder="Weight"> lbs
+          </label>
+
+          <button class="btn btn-success addExDoneBtn" ng-click="confirmAdd()">Done</button>
+
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="editButtonsWrapper">
+        <button class="btn btn-primary btn-block" ng-click="addExercise()">Add New Exercise</button><br>
+        <button class="btn btn-primary saveRoutineButton" ng-click="saveRoutine(routine.id)">Save Routine</button>
+        <button class="btn btn-primary cancelButton" ng-click="cancel()">Cancel</button>
+      </div>
+
+</div> <!-- end container -->
+
+
+
+
+
+
+
+<!-- <label class="" id="">
   <span class="input-label">Routine Title</span>
   <input type="text" id="" ng-model="routine.title">
 </label>
@@ -58,4 +156,4 @@
 
 <button ng-click="addExercise()">Add New Exercise</button><br>
 <button ng-click="saveRoutine(routine.id)">Save Routine</button>
-<button ng-click="cancel()">Cancel</button>
+<button ng-click="cancel()">Cancel</button> -->

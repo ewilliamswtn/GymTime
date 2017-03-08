@@ -7,6 +7,9 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
 
 
 
+
+
+
   //a variable to holder a selected routine id -> pass between sibling ctrls
   let selectedRoutine;
 
@@ -24,6 +27,34 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
     }
     $scope.$apply();
   });
+
+
+  $scope.routinesNav = function () {
+    $("li").removeClass("active");
+    $(".navLinkRoutine").addClass("active");
+    $window.location.href = "#/routines";
+  };
+
+  $scope.newRoutinesNav = function () {
+    $("li").removeClass("active");
+    $(".navLinkNewRoutine").addClass("active");
+    $window.location.href = "#/routines/create";
+  };
+
+  $scope.logsNav = function () {
+    $("li").removeClass("active");
+    $(".navLinkLogs").addClass("active");
+    $window.location.href = "#/routines/completed";
+  };
+
+  $scope.logoutNav = function () {
+    $("li").removeClass("active");
+
+    $window.location.href = "#/login";
+  };
+
+
+
 
   //manually log out user
   $scope.logout = function() {

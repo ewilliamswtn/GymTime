@@ -1,9 +1,17 @@
-<div ng-repeat="routine in routines">
-  <p>{{routine.title}}</p>
-  <button ng-click="deployRoutine(routine.id)">Deploy</button>
-  <button ng-click="editRoutine(routine.id)">Edit</button>
-  <button ng-click="deleteRoutine(routine.id)">Delete</button>
-</div><br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-1 addRoutineButtonWrapper"><i class="material-icons addRoutineButton" ng-click="createNewRoutine()">add_box</i></div>
+    <div class="col-xs-10 routineCardWrapper">
+      <div class="routineCard" ng-repeat="routine in routines">
+        <span>{{routine.title}}</span><button class="btn btn-primary editRoutineButton" ng-click="editRoutine(routine.id)"><i class="material-icons">create</i></button><br>
+        <button class="btn btn-primary deployRoutineButton" ng-click="deployRoutine(routine.id)"><i class="material-icons">fitness_center</i></button>
+        <button class="btn btn-primary deleteRoutineButton" ng-click="deleteRoutine(routine.id)"><i class="material-icons">clear</i></button>
+      </div><br>
+    </div>
+  </div>
+</div>
 
-<button ng-click="createNewRoutine()">Add</button><br>
-<button ng-click="viewCompletedRoutines()">View Completed</button>
+
+
+<!-- ***** maybe just navigate to 'completed' view via navbar? ***** -->
+<!-- <button ng-click="viewCompletedRoutines()">View Completed</button> -->

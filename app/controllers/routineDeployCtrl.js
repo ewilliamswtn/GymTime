@@ -36,14 +36,16 @@ app.controller("routineDeployCtrl", function ($scope, $window, authFactory, user
 
         //store the exercise objects in yet another array
         $scope.exerciseObjArray.push(data);
-
         //sort array based on index number
         $scope.exerciseObjArray.sort(function (a, b) {
           return a.index - b.index;
         });
+        console.log(value, index);
       }); //end .then following getExercise(s) call
     }); //end looper over exerciseArray
   }); //end .then following getRoutine call
+
+
 
   //mark all exercise checkboxes as done  ***** WE DONT EVER NEED TO UNMARK ALL BC #GETSWOLE ******
   $scope.allDone = function  () {
@@ -77,11 +79,11 @@ app.controller("routineDeployCtrl", function ($scope, $window, authFactory, user
 
       // ***** get the date *****
       // ** actual date **
-      // let d = new Date();
+      let d = new Date();
       // ** end actual date **
 
       // ** date faker for dummy data **
-      let d = new Date("2013-10-10T20:24:50.883Z");
+      // let d = new Date("2015-10-12T20:24:50.883Z");
       // ** end date faker **
       // ****** end date code block ******
 
