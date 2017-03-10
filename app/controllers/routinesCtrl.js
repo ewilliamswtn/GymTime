@@ -24,6 +24,8 @@ app.controller("routinesCtrl", function ($scope, $window, authFactory, routineFa
   //****** navigates to page ******
   $scope.createNewRoutine = function () {
     $window.location.href = "#/routines/create";
+    $(".navA").removeClass("active");
+    $(".navLinkNewRoutine").addClass("active");
   };
 
   $scope.viewCompletedRoutines = function () {

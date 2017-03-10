@@ -64,9 +64,10 @@ body {
 }
 
 /*active*/
-.nav li.active a {
+.nav a.active {
 	background-color: #0E3951;
 }
+
 
 canvas {
 	max-width: 85%;
@@ -75,23 +76,23 @@ canvas {
 
 /*when mouse leaves, but was last on this button.  annoying*/
 .nav>li>a:focus {
-	background-color: #115075;
+	background-color: #0E3951;
 }
 
 /*hover*/
 .nav>li>a:hover {
-	background-color: #0E3951;
+	background-color: #00283C;
 }
 
 
 /*hover over active*/
-.nav-pills>li.active>a:hover {
+/*.nav-pills>li.active>a:hover {
 	background-color: #00283C;
 }
 
 .nav-pills>li.active>a:focus {
 	background-color: #00283C;
-}
+}*/
 
 /****** login page ******/
 
