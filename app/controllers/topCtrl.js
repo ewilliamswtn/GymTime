@@ -30,25 +30,25 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
 
 
   $scope.routinesNav = function () {
-    $("li").removeClass("active");
+    $(".navA").removeClass("active");
     $(".navLinkRoutine").addClass("active");
     $window.location.href = "#/routines";
   };
 
   $scope.newRoutinesNav = function () {
-    $("li").removeClass("active");
+    $(".navA").removeClass("active");
     $(".navLinkNewRoutine").addClass("active");
     $window.location.href = "#/routines/create";
   };
 
   $scope.logsNav = function () {
-    $("li").removeClass("active");
+    $(".navA").removeClass("active");
     $(".navLinkLogs").addClass("active");
     $window.location.href = "#/routines/completed";
   };
 
   $scope.logoutNav = function () {
-    $("li").removeClass("active");
+    $(".navA").removeClass("active");
 
     $window.location.href = "#/login";
   };
