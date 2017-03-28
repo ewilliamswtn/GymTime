@@ -40,7 +40,7 @@ app.controller("routineDeployCtrl", function ($scope, $window, authFactory, user
         $scope.exerciseObjArray.sort(function (a, b) {
           return a.index - b.index;
         });
-        console.log(value, index);
+        // console.log(value, index);
       }); //end .then following getExercise(s) call
     }); //end looper over exerciseArray
   }); //end .then following getRoutine call

@@ -11,7 +11,11 @@ app.factory("routineFactory", ($q, $http, FirebaseURL, userFactory) => {
         if (routinesObj) {
           Object.keys(routinesObj).forEach((key) => {
             routinesObj[key].id = key;
-            routines.push(routinesObj[key]);
+
+            if (userFactory.getUser() == routinesObj[key].uid) {
+             routines.push(routinesObj[key]);
+            }
+
           });
         }
         resolve(routines);
