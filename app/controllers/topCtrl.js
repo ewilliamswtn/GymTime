@@ -28,6 +28,14 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
     $scope.$apply();
   });
 
+    //manually log out user
+  $scope.logout = function() {
+    authFactory.logoutUser()
+    .then(function(data) {
+      console.log("logged out", data);
+    });
+  };
+
 
   $scope.routinesNav = function () {
     $(".navA").removeClass("active");
@@ -49,18 +57,9 @@ app.controller("topCtrl", function  ($scope, $location, $window, authFactory, us
 
   $scope.logoutNav = function () {
     $(".navA").removeClass("active");
-
+    $scope.logout();
     $window.location.href = "#/login";
   };
 
 
-
-
-  //manually log out user
-  $scope.logout = function() {
-    authFactory.logoutUser()
-    .then(function(data) {
-      console.log("logged out", data);
-    });
-  };
 });
