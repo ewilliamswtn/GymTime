@@ -10,5 +10,8 @@ GymTime is a lite web app used to structure exercise routines and log workout da
 ## Technologies
 GymTime is a web app styled with mobile use in mind. It utilizes jQuery, Angular, and Bootstrap. User data and exercise logs are stored in Firebase.
 
+## Video Walkthrough
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VwmgIJWBAaQ" target="_blank"> <img src="http://img.youtube.com/vi/YVwmgIJWBAaQ/0.jpg" alt="Walkthrough" width="240" height="180" border="10" /></a>
+Check out the link below if you'd like to see a brief Walkthrough of this app on YouTube
+
+[![Walkthrough](https://img.youtube.com/vi/VwmgIJWBAaQ/0.jpg)](https://www.youtube.com/watch?v=VwmgIJWBAaQ)
